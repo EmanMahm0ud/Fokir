@@ -164,7 +164,7 @@ a
     border: solid 10px #333;
     border-radius: 5px;
     position: relative;
-    width: 360;
+    width: 360px;
     height: 440px;
 }
 
@@ -172,13 +172,14 @@ a
 {
     overflow: hidden;
     position: absolute;
-    left: 10;
-    top: 10;
+    left: 10px;
+    top: 10px;
 }
 
 .about-image img
 {
     border-radius: 5px;
+    display: block;
 }
 
 .about-caption
@@ -369,6 +370,7 @@ a
 .portfolio .item img
 {
     width: 100%;
+    display: block;
 }
 
 .caption
@@ -392,8 +394,8 @@ a
     color: #ff305b;
     font-size: 18px;
     position: absolute;
-    bottom: 10;
-    right: 10;
+    bottom: 10px;
+    right: 10px;
     opacity: 0;
     transition-property: opacity;
     transition-duration: 500ms;
