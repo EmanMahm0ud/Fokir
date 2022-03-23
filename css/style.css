@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body
 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -98,6 +102,16 @@ a
 .nav-menu ul li a:hover
 {
     color: #ff305b;
+}
+
+/*---------------------------- For scrolling --------------------*/
+
+.about, .services, .portfolio, .feedback, .contactus {
+    -webkit-scroll-margin: 60px;
+    -moz-scroll-margin: 60px;
+    -ms-scroll-margin: 60px;
+    -o-scroll-margin: 60px;
+    scroll-margin: 60px;
 }
 
 /*----------------------------HOME--------------------------------*/
