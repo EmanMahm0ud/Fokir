@@ -14,6 +14,21 @@ body
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #333;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #ff305b;
+}
+
+::selection {
+    background-color: #ff305b;
+    color: #ffffff;
+}
+
 h1
 {
     color: #ff305b;
@@ -34,6 +49,7 @@ h2
 a
 {
     text-decoration: none;
+    color: #ffffff;
 }
 
 .clearfix
@@ -66,13 +82,13 @@ a
     width: 100%;
     display: flex;  
     justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.788);
+    align-items: center;
+    background-color: transparent;
 }
 
 .nav-logo
 {
-    width: 25%;
-    padding: 20px 0;
+    padding: 10px 0;
     color: #ff305b;
     font-size: 26px;
     font-weight: 600;
@@ -86,7 +102,7 @@ a
 
 .nav-menu ul li
 {
-    padding: 20px 10px;
+    padding: 10px 10px;
 }
 
 .nav-bar ul li a
@@ -126,11 +142,11 @@ a
 /*---------------------------- For scrolling --------------------*/
 
 .about, .services, .portfolio, .feedback, .contactus {
-    -webkit-scroll-margin: 60px;
-    -moz-scroll-margin: 60px;
-    -ms-scroll-margin: 60px;
-    -o-scroll-margin: 60px;
-    scroll-margin: 60px;
+    -webkit-scroll-margin: 50px;
+    -moz-scroll-margin: 50px;
+    -ms-scroll-margin: 50px;
+    -o-scroll-margin: 50px;
+    scroll-margin: 50px;
 }
 
 /*----------------------------HOME--------------------------------*/
@@ -639,7 +655,25 @@ a
     text-decoration: underline;
 }
 
+/* --------------------------------- */
 
+.arrow-up {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.4rem;
+    background-color: #ff305b;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: visibility 0.5s, opacity 0.5s;
+}
 
 /*-----------------------MEDIA-----------------------*/
 
