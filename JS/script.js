@@ -1,8 +1,12 @@
 const navbarDashes = document.querySelector(".dash-container");
 const navList = document.querySelector(".nav-menu ul");
-const homeSection = document.querySelector(".home")
+const homeSection = document.querySelector(".home");
+const numberSection = document.querySelector(".numbers");
 const arrowUp = document.querySelector(".arrow-up");
 const navbar = document.querySelector(".nav-bar");
+const number = document.querySelectorAll(".number");
+
+let flag = true;  // true if the screen doesn't reach the "numbers" section
 
 // open/close the navbar items when the dashed button is clicked
 function openMenu() {
@@ -42,11 +46,30 @@ function editNavbarColor() {
     }
 }
 
+const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+
+// count from 0 to a specific number when the screen reaches the number section
+async function counter(endNum, sleepNum, cellNum) {
+    for (let i = 0 ; i <= endNum ; i+=2) {
+        await sleep(sleepNum);
+        number[cellNum].innerHTML = i;
+    }
+}
+
 navbarDashes.addEventListener("click", openMenu);
 
 window.addEventListener("resize", resetNavbar);
 
-window.addEventListener("scroll", () =>  {
+window.addEventListener("scroll", () => {
     showArrowUp();
     editNavbarColor();
+    if (flag && window.scrollY + window.innerHeight - 100 >= numberSection.offsetTop) {
+        flag = false;
+        counter(80, 50, 0);
+        counter(138, 40, 1);
+        counter(720, 5, 2);
+        counter(1200, 0, 3);
+    }
 });
