@@ -51,9 +51,9 @@ const sleep = (milliseconds) => {
 }
 
 // count from 0 to a specific number when the screen reaches the number section
-async function counter(endNum, sleepNum, cellNum) {
-    for (let i = 0 ; i <= endNum ; i+=2) {
-        await sleep(sleepNum);
+async function counter(endNum, step, cellNum) {
+    for (let i = 0 ; i <= endNum ; i+=step) {
+        await sleep(0);
         number[cellNum].innerHTML = i;
     }
 }
@@ -67,9 +67,9 @@ window.addEventListener("scroll", () => {
     editNavbarColor();
     if (flag && window.scrollY + window.innerHeight - 100 >= numberSection.offsetTop) {
         flag = false;
-        counter(80, 50, 0);
-        counter(138, 40, 1);
-        counter(720, 5, 2);
-        counter(1200, 0, 3);
+        counter(200, 2, 0);
+        counter(346, 2, 1);
+        counter(1800, 9, 2);
+        counter(1200, 6, 3);
     }
 });
