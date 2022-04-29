@@ -102,7 +102,7 @@ a
 
 .nav-menu ul li
 {
-    padding: 10px 10px;
+    padding: 10px;
 }
 
 .nav-bar ul li a
@@ -118,7 +118,7 @@ a
 .nav-menu .dash-container {
     width: 30px;
     height: 25px;
-    margin: 20px 10px;
+    margin: 20px 80px 20px 10px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -682,6 +682,15 @@ a
 
 @media only screen and (max-width: 600px) {
 
+    .nav-bar {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .nav-bar .nav-logo {
+        margin: 5px 80px;
+    }
+
     .nav-menu ul {
         display: none;
     }
@@ -738,6 +747,15 @@ a
 }
 
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
+
+    .nav-bar {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .nav-bar .nav-logo {
+        margin: 5px 80px;
+    }
 
     .nav-menu ul {
         display: none;
