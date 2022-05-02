@@ -115,6 +115,10 @@ a
     color: #ff305b;
 }
 
+.nav-bar .active a {
+    color: #ff305b;
+}
+
 .nav-menu .dash-container {
     width: 30px;
     height: 25px;

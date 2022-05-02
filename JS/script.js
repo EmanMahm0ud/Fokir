@@ -5,8 +5,31 @@ const numberSection = document.querySelector(".numbers");
 const arrowUp = document.querySelector(".arrow-up");
 const navbar = document.querySelector(".nav-bar");
 const number = document.querySelectorAll(".number");
+const navbarLists = document.querySelectorAll(".nav-menu li");
+const sectionNames = ["home", "about", "services", "portfolio", "feedback", "blog", "contactus"];
+const sectionTops = [];
+const sectionHeights = [];
+(function () {
+    console.log("ekfnkvn")
+    for (let i = 0 ; i < navbarLists.length ; i++) {
+        sectionTops.push(document.getElementById(sectionNames[i]).offsetTop);
+        sectionHeights.push(document.getElementById(sectionNames[i]).offsetTop + document.getElementById(sectionNames[i]).offsetHeight);
+        console.log(document.getElementById(sectionNames[i]).offsetTop, sectionHeights[i]);
+    }
+})();
 
 let flag = true;  // true if the screen doesn't reach the "numbers" section
+
+// add/remove active class to/from the list of the active section
+function toggleActive() {
+    for (let i = 0 ; i < navbarLists.length ; i++) {
+        if (window.scrollY > sectionTops[i] - 60 && window.scrollY < sectionHeights[i]) {
+            let activeSection = document.querySelector(".nav-bar .active");
+            activeSection.classList.remove("active");
+            navbarLists[i].classList.add("active");
+        }
+    }
+}
 
 // open/close the navbar items when the dashed button is clicked
 function openMenu() {
@@ -72,4 +95,5 @@ window.addEventListener("scroll", () => {
         counter(1800, 9, 2);
         counter(1200, 6, 3);
     }
+    toggleActive();
 });
