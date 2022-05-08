@@ -558,6 +558,55 @@ a
     color: #ffdf00;
 }
 
+/* -------------- BLOG ------------------ */
+
+.blog {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+}
+
+.blog-container {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.blog-container .blog-card {
+    width: 30%;
+    margin: 40px auto;
+    background-color: #ffffff;
+}
+
+.blog-container .blog-card img {
+    width: 100%;
+}
+
+.blog-container .card-info {
+    padding: 20px;
+}
+
+.blog-card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.blog-card p {
+    color: #333;
+}
+
+.blog-card .readmore {
+    margin: 10px 0;
+    transition: color 400ms;
+}
+
+.blog-card .readmore:hover {
+    color: #ff305b;
+    cursor: pointer;
+}
+
 /*------------CONTACT-US-------*/
 
 .contactus
@@ -703,7 +752,7 @@ a
         display: flex;
     }
 
-    .about, .services .container, .portfolio .images-conatainer, .numbers, .card, .contact-container {
+    .about, .services .container, .portfolio .images-conatainer, .numbers, .card, .blog-container, .contact-container {
         width: 100%;
     }
 
@@ -745,6 +794,14 @@ a
 
     /* ---------------------- */
 
+    .blog-container .blog-card {
+        width: 80%;
+    }
+
+    .blog-container {
+        background-color: #ff305b;
+    }
+
     .contact-input1 {
         width: 100%;
     }
@@ -769,7 +826,7 @@ a
         display: flex;
     }
 
-    .about, .services .container, .portfolio .images-conatainer, .card, .contact-container {
+    .about, .services .container, .portfolio .images-conatainer, .card, .blog-container, .contact-container {
         width: 90%;
     }
 
