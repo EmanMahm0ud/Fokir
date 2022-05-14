@@ -5,16 +5,15 @@ const numberSection = document.querySelector(".numbers");
 const arrowUp = document.querySelector(".arrow-up");
 const navbar = document.querySelector(".nav-bar");
 const number = document.querySelectorAll(".number");
+const sliderBtns = document.querySelectorAll(".slider-btns button");
 const navbarLists = document.querySelectorAll(".nav-menu li");
 const sectionNames = ["home", "about", "services", "portfolio", "feedback", "blog", "contactus"];
 const sectionTops = [];
 const sectionHeights = [];
 (function () {
-    console.log("ekfnkvn")
     for (let i = 0 ; i < navbarLists.length ; i++) {
         sectionTops.push(document.getElementById(sectionNames[i]).offsetTop);
         sectionHeights.push(document.getElementById(sectionNames[i]).offsetTop + document.getElementById(sectionNames[i]).offsetHeight);
-        console.log(document.getElementById(sectionNames[i]).offsetTop, sectionHeights[i]);
     }
 })();
 
@@ -81,6 +80,20 @@ async function counter(endNum, step, cellNum) {
     }
 }
 
+// when the user clicks on a slider button the cards are changed
+function changeSlider(i) {
+    let cards = document.querySelectorAll(".feedback .card");
+    for (let j = 0; j < cards.length; j++) {
+        if (i == 0) {
+            cards[j].style.left = "0";
+        } else if (i == 1) {
+            cards[j].style.left = "-50%";
+        }
+        sliderBtns[j].classList.remove("active-slide");
+    }
+    sliderBtns[i].classList.add("active-slide")
+}
+
 navbarDashes.addEventListener("click", openMenu);
 
 window.addEventListener("resize", resetNavbar);
@@ -97,3 +110,9 @@ window.addEventListener("scroll", () => {
     }
     toggleActive();
 });
+
+for (let i = 0; i < sliderBtns.length; i++) {
+    sliderBtns[i].addEventListener("click", () =>{
+        changeSlider(i);
+    });
+}
