@@ -52,10 +52,7 @@ a
     color: #ffffff;
 }
 
-.clearfix
-{
-    clear: both;
-}
+
 
 .border1
 {
@@ -294,23 +291,6 @@ a
     padding: 10px 0;
 }
 
-.about button
-{
-    background-color: #ff305b;
-    color: white;
-    padding: 15px 25px;
-    margin: 10px 10px 10px 0;
-    border-radius: 5px;
-    transition-property: background-color;
-    transition-duration: 500ms;
-    border: none;
-}
-
-.about button:hover
-{
-    background-color: #ff305b;
-}
-
 /*------------------------SERVICES------------------------------*/
 
 .services
@@ -340,6 +320,7 @@ a
 .service:hover
 {
     background-color: #ffffff;
+    box-shadow: 0 0 40px 0 #999;
 }
 
 .service h3
@@ -589,6 +570,24 @@ a
     background-color: #ff305b;
 }
 
+.about button, .contactus button {
+    background-color: #ff305b;
+    color: white;
+    padding: 15px 25px;
+    margin: 10px 10px 10px 0;
+    border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    border: 2px solid #ff305b;
+}
+
+.about button:hover, .contactus button:hover {
+    cursor: pointer;
+    color: #ff305b;
+    background-color: #fff;
+    border: 2px solid #ff305b;
+}
+
 /* -------------- BLOG ------------------ */
 
 .blog {
@@ -678,22 +677,6 @@ a
 {
     outline: none;
     border-color: #ff305b;
-}
-
-.contact-container button
-{
-    background-color: #ff305b;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition-property: background-color;
-    transition-duration: 500ms;
-    border: none;
-}
-
-.contact-container button:hover
-{
-    background-color: #ff305b;
 }
 
 /*------------footer-----------*/
